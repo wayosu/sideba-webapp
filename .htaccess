@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteBase /sideba-webapp/
+
+Options +FollowSymLinks
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^login$ login.php
+
+# User
+RewriteRule ^index$ index.php
+RewriteRule ^layanan$ index.php?views=layanan
+RewriteRule ^layanan/umum$ index.php?views=umum
+
+# Admin
+RewriteRule ^admin$ admin.php
+RewriteRule ^admin/penduduk$ admin.php?views_admin=penduduk
+RewriteRule ^admin/penduduk/create$ admin.php?views_admin=create_penduduk
+RewriteRule ^admin/bantuan$ admin.php?views_admin=bantuan
+RewriteRule ^admin/profile$ admin.php?views_admin=profile
+RewriteRule ^admin/profile/password$ admin.php?views_admin=password
+
+RewriteRule ^([A-Za-z0-9-]+)$ index.php?views=$1
+RewriteRule ^([A-Za-z0-9-]+)$ admin.php?views_admin=$1
+
+# X-XSS-Protection
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+Options All -Indexes
