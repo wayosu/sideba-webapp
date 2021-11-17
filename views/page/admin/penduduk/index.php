@@ -30,7 +30,7 @@
                             <a href="<?= $base_url; ?>admin/penduduk/create" class="btn btn-sm btn-primary font-weight-bold shadow"><i class="fas fa-plus-circle"></i> Tambah Penduduk</a>
                         </div>
                         <div class="border-bottom my-3"></div>
-                        <table id="example1" class="table table-striped">
+                        <table id="example1" class="table table-striped text-sm">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -43,7 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php read($mysqli); ?>
+                                <?php read($base_url, $mysqli); ?>
                             </tbody>
                         </table>
                     </div>

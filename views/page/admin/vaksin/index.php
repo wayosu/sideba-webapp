@@ -1,3 +1,6 @@
+<?php
+    include 'app/function/admin/vaksin/function.php';
+?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -18,7 +21,34 @@
 <!-- Main content -->
 <div class="content">
     <div class="container-fluid">
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h4 class="card-title">Data Vaksin</h4>
+                        </div>
+                        <div class="border-bottom my-3"></div>
+                        <table id="example1" class="table table-striped text-sm">
+                            <thead>
+                                <tr>
+                                    <th width="4%">#</th>
+                                    <th>NIK</th>
+                                    <th>Nama</th>
+                                    <th width="12%">Status Vaksin</th>
+                                    <th width="12%">Jenis Kelamin</th>
+                                    <th width="12%">Umur</th>
+                                    <th>Alamat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php read($mysqli); ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- /.container-fluid -->
 </div>
 <!-- /.content -->

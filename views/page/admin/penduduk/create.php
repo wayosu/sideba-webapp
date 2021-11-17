@@ -54,12 +54,12 @@
                                         <label for="alamat">Alamat</label>
                                         <textarea name="alamat" id="alamat" class="form-control form-control-lg text-sm"></textarea>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="dusun">Dusun</label>
                                         <input type="text" name="dusun" class="form-control form-control-lg text-sm" id="dusun">
                                     </div>
+                                </div>
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="pekerjaan">Pekerjaan</label>
                                         <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" id="pekerjaan">
@@ -83,6 +83,10 @@
                                     <div class="form-group">
                                         <label for="password">Password (Password Default)</label>
                                         <input type="text" name="password" class="form-control form-control-lg text-sm" id="password" readonly value="pendudukBerlian">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vaksin">Vaksin</label><br>
+                                        <input type="checkbox" name="vaksin" class="my-checkbox" id="vaksin" value="1" data-bootstrap-switch>
                                     </div>
                                 </div>
                             </div>
