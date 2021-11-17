@@ -7,7 +7,7 @@
                     <div class="rounded py-2 px-3 bg-teal text-sm shadow">
                         <i class="fas fa-user"></i>
                     </div>
-                    <h1 class="m-0 ml-2 text-dark text-lg font-weight-normal">Tambah Penduduk</h1>
+                    <h1 class="m-0 ml-2 text-dark text-lg font-weight-normal">Tambah Data Penduduk</h1>
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -85,8 +85,10 @@
                                         <input type="text" name="password" class="form-control form-control-lg text-sm" id="password" readonly value="pendudukBerlian">
                                     </div>
                                     <div class="form-group">
-                                        <label for="vaksin">Vaksin</label><br>
-                                        <input type="checkbox" name="vaksin" class="my-checkbox" id="vaksin" value="1" data-bootstrap-switch>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" name="vaksin" id="customSwitch" value="1">
+                                            <label class="custom-control-label" for="customSwitch">sudah di vaksin?</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

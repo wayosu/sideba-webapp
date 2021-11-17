@@ -19,6 +19,7 @@ RewriteRule ^admin/penduduk$ admin.php?views_admin=penduduk
 RewriteRule ^admin/penduduk/create$ admin.php?views_admin=create_penduduk
 
 RewriteRule ^admin/bantuan$ admin.php?views_admin=bantuan
+RewriteRule ^admin/bantuan/create$ admin.php?views_admin=create_bantuan
 
 RewriteRule ^admin/vaksin$ admin.php?views_admin=vaksin
 
@@ -27,6 +28,16 @@ RewriteRule ^admin/profile/password$ admin.php?views_admin=password
 
 RewriteRule ^([A-Za-z0-9-]+)$ index.php?views=$1
 RewriteRule ^([A-Za-z0-9-]+)$ admin.php?views_admin=$1
+
+<Files "base_url.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "conn.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
 
 # X-XSS-Protection
 <IfModule mod_headers.c>

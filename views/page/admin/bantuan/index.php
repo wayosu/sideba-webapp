@@ -1,3 +1,6 @@
+<?php
+    include 'app/post/admin/bantuan/post.php';
+?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -33,14 +36,14 @@
                                     <th>#</th>
                                     <th>NIK</th>
                                     <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
+                                    <th>Alamat</th>
                                     <th>Pekerjaan</th>
                                     <th>Bantuan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <?php read($base_url, $mysqli); ?>
                             </tbody>
                         </table>
                     </div>

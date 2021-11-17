@@ -20,6 +20,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/dist/css/adminlte.min.css">
     <!-- Custom CSS -->
