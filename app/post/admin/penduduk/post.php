@@ -6,6 +6,7 @@
         $email = $_POST['email'];
 
         $result = $mysqli->query("SELECT * FROM user WHERE nik='$nik'");
+        $result2 = $mysqli->query("SELECT * FROM user WHERE email='$email'");
 
         if (mysqli_num_rows($result) > 0) {
             ?>
@@ -17,7 +18,6 @@
             return false;
         }
 
-        $result2 = $mysqli->query("SELECT * FROM user WHERE email='$email'");
 
         if (mysqli_num_rows($result2) > 0) {
             ?>

@@ -15,7 +15,9 @@ include 'views/layout/admin/sidebar.php';
     } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "create_penduduk") {
         include 'views/page/admin/penduduk/create.php';
     } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "bantuan") {
-        include 'views/page/admin/data_bantuan.php';
+        include 'views/page/admin/bantuan/index.php';
+    } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "vaksin") {
+        include 'views/page/admin/vaksin/index.php';
     } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "profile") {
         include 'views/page/admin/profile.php';
     } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "password") {

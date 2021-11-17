@@ -1,6 +1,3 @@
-<?php
-    include 'app/post/admin/penduduk/post.php';
-?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -27,9 +24,9 @@
                 <!-- general form elements -->
                 <div class="card">
                     <!-- form start -->
-                    <form action="" method="POST">
+                    <form action="<?= $base_url; ?>admin/penduduk" method="POST">
                         <div class="card-body">
-                            <a href="<?= $base_url; ?>admin/penduduk" class="text-sm text-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
+                            <a href="<?= $base_url; ?>admin/penduduk" class="btn btn-sm btn-link"><i class="fas fa-arrow-left"></i> Kembali</a>
                             <div class="border-bottom my-3"></div>
                             <div class="row">
                                 <div class="col-md-6">

@@ -74,6 +74,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="<?= $base_url; ?>admin/vaksin" class="nav-link">
+                        <i class="nav-icon fas fa-syringe"></i>
+                        <p>
+                            Data Vaksin
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= $base_url; ?>admin/profile" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>

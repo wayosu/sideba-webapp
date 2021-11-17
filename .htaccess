@@ -17,7 +17,11 @@ RewriteRule ^layanan/umum$ index.php?views=umum
 RewriteRule ^admin$ admin.php
 RewriteRule ^admin/penduduk$ admin.php?views_admin=penduduk
 RewriteRule ^admin/penduduk/create$ admin.php?views_admin=create_penduduk
+
 RewriteRule ^admin/bantuan$ admin.php?views_admin=bantuan
+
+RewriteRule ^admin/vaksin$ admin.php?views_admin=vaksin
+
 RewriteRule ^admin/profile$ admin.php?views_admin=profile
 RewriteRule ^admin/profile/password$ admin.php?views_admin=password
 

@@ -1,3 +1,6 @@
+<?php
+    include 'app/post/admin/penduduk/post.php';
+?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -27,18 +30,20 @@
                             <a href="<?= $base_url; ?>admin/penduduk/create" class="btn btn-sm btn-primary font-weight-bold shadow"><i class="fas fa-plus-circle"></i> Tambah Penduduk</a>
                         </div>
                         <div class="border-bottom my-3"></div>
-                        <table id="example1" class="table">
+                        <table id="example1" class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>NIK</th>
                                     <th>Nama</th>
                                     <th>Jenis Kelamin</th>
+                                    <th>Umur</th>
                                     <th>Pekerjaan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php read($mysqli); ?>
                             </tbody>
                         </table>
                     </div>
