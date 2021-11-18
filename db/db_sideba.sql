@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2021 at 08:24 PM
+-- Generation Time: Nov 18, 2021 at 04:36 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.21
 
@@ -38,8 +38,9 @@ CREATE TABLE `bantuan` (
 --
 
 INSERT INTO `bantuan` (`id`, `nik`, `jenis_bantuan`) VALUES
-(3, 856746324546, 'BLT'),
-(5, 5463523213, 'PKH');
+(7, 5463523213, 'PKH'),
+(8, 654321242344, 'BPNT'),
+(9, 45632234234, 'BST');
 
 -- --------------------------------------------------------
 
@@ -68,9 +69,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nik`, `nama`, `tgl_lahir`, `jk`, `alamat`, `dusun`, `pekerjaan`, `agama`, `email`, `password`, `role`, `vaksin`) VALUES
-(6, 654321242344, 'Sujiman', '1998-11-05', 'Laki-laki', 'Jl. Kalkulus', 'Dusun 1', 'Pekerja Lepas', 'Buddha', 'sujiman@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 1),
-(7, 5463523213, 'Xiang Ling babi', '1982-02-01', 'Perempuan', 'Jl. xang xing babi', 'Dusun 2 babi', 'PNS babi', 'Katolik', 'xiang@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 0),
-(9, 856746324546, 'Uzumaki Naruto', '1990-12-07', 'Laki-laki', 'Konoha', 'Dusun 3', 'Hokage', 'Buddha', 'naruto@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 1);
+(6, 654321242344, 'Sofyan LM.', '1998-11-05', 'Laki-laki', 'Jl. Kalkulus', 'Dusun 1', 'Pekerja Lepas', 'Buddha', 'sofyan@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 1),
+(7, 5463523213, 'Jess K.', '1988-02-01', 'Perempuan', 'Jl. xang xing', 'Dusun 2', 'PNS', 'Katolik', 'jess@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 1),
+(9, 856746324546, 'Anwar', '1990-12-07', 'Laki-laki', '-', 'Dusun 2', 'Admin SIDEBA', 'Konghucu', 'ilham@gmail.com', '367c32a400f234e2c77a52f306499e08', 1, 1),
+(10, 45632234234, 'Rizal A. Hasa', '1999-02-09', 'Laki-laki', 'Limboto Barat', 'Dusun 1', 'PNS', 'Kristen', 'rizal@gmail.com', '367c32a400f234e2c77a52f306499e08', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -96,13 +98,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `bantuan`
 --
 ALTER TABLE `bantuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

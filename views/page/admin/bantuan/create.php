@@ -35,7 +35,7 @@
                                         <select class="form-control select2" name="nik" onchange="fetch_select(this.value);" style="width: 100%;">
                                             <option value="" hidden>--Pilih Data Penduduk--</option>
                                             <?php
-                                            $result = $mysqli->query("SELECT * FROM user");
+                                            $result = $mysqli->query("SELECT * FROM user WHERE role=0");
                                             while ($row = $result->fetch_assoc()) {
                                                 $result_bantuan = $mysqli->query("SELECT * FROM bantuan WHERE nik='{$row['nik']}'");
                                                 if (mysqli_num_rows($result_bantuan) == 0) {

@@ -2,7 +2,7 @@
 
 function total_penduduk($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user");
+    $result = $mysqli->query("SELECT * FROM user WHERE role=0");
     $total = mysqli_num_rows($result);
 
     return $total;
@@ -10,7 +10,7 @@ function total_penduduk($mysqli)
 
 function laki_laki($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user WHERE jk='Laki-laki'");
+    $result = $mysqli->query("SELECT * FROM user WHERE jk='Laki-laki' AND role=0");
     $total = mysqli_num_rows($result);
 
     return $total;
@@ -18,7 +18,7 @@ function laki_laki($mysqli)
 
 function perempuan($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user WHERE jk='Perempuan'");
+    $result = $mysqli->query("SELECT * FROM user WHERE jk='Perempuan' AND role=0");
     $total = mysqli_num_rows($result);
     // $cek = isset($total) ? $total : 0;
 
@@ -35,7 +35,7 @@ function bantuan($mysqli)
 
 function vaksin($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user WHERE vaksin=1");
+    $result = $mysqli->query("SELECT * FROM user WHERE vaksin=1 AND role=0");
     $total = mysqli_num_rows($result);
 
     return $total;
@@ -43,7 +43,7 @@ function vaksin($mysqli)
 
 function show_penduduk($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user ORDER BY id DESC LIMIT 5");
+    $result = $mysqli->query("SELECT * FROM user WHERE role=0 ORDER BY id DESC LIMIT 5");
     while ($row = $result->fetch_assoc()) {
         echo "
             <tr>
@@ -74,7 +74,7 @@ function show_bantuan($mysqli)
 
 function show_vaksin($mysqli)
 {
-    $result = $mysqli->query("SELECT * FROM user WHERE vaksin=1 ORDER BY id DESC");
+    $result = $mysqli->query("SELECT * FROM user WHERE vaksin=1 AND role=0 ORDER BY id DESC");
     while ($row = $result->fetch_assoc()) {
         echo "
             <tr>

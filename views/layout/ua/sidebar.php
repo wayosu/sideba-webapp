@@ -13,7 +13,7 @@
                 <img src="<?= $base_url; ?>assets/bootstrap/dist/img/dummy.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block"><?= $_SESSION['nama']; ?></a>
+                <a href="#" class="d-block"><?= $row_data['nama']; ?></a>
                 <span class="text-muted text-sm"><?= $row_data['nik']; ?></span>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <?php
     function read($mysqli)
     {
-        $result = $mysqli->query("SELECT * FROM user ORDER BY vaksin DESC");
+        $result = $mysqli->query("SELECT * FROM user WHERE role=0 ORDER BY vaksin DESC");
         $no=1;
         while($row = $result->fetch_assoc()) {
             $lahir = new DateTime($row['tgl_lahir']);
