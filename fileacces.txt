@@ -1,0 +1,20 @@
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Files>
+
+<Files index.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files admin.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files user.php>
+    Order Allow,Deny
+    Allow from all
+</Files>

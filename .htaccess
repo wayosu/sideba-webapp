@@ -8,7 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^login$ login.php
 
-# User
+# User Backup
 RewriteRule ^index$ index.php
 RewriteRule ^layanan$ index.php?views=layanan
 RewriteRule ^layanan/umum$ index.php?views=umum
@@ -25,6 +25,9 @@ RewriteRule ^admin/vaksin$ admin.php?views_admin=vaksin
 
 RewriteRule ^admin/profile$ admin.php?views_admin=profile
 RewriteRule ^admin/profile/password$ admin.php?views_admin=password
+
+# User
+RewriteRule ^user$ user.php
 
 RewriteRule ^([A-Za-z0-9-]+)$ index.php?views=$1
 RewriteRule ^([A-Za-z0-9-]+)$ admin.php?views_admin=$1

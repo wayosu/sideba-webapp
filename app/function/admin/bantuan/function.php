@@ -280,6 +280,7 @@ function read($base_url, $mysqli)
         </div>
         <!-- /.modal -->
 <?php
+    $no++;
     }
 }
 

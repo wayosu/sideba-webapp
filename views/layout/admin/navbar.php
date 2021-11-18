@@ -11,7 +11,7 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
             <a class="navbar-brand dropdown-toggle d-flex align-items-center" data-toggle="dropdown" href="#">
-                <img src="<?= $base_url; ?>assets/bootstrap/dist/img/user2-160x160.jpg" alt="image" class="rounded-circle" width="30">
+                <img src="<?= $base_url; ?>assets/bootstrap/dist/img/dummy.jpg" alt="image" class="rounded-circle" width="30">
                 <p class="mb-1 mx-3 text-black font-weight-lighter text-md d-none d-md-block">Alexander Pierce</p>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
