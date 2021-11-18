@@ -30,49 +30,133 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" name="nama" class="form-control form-control-lg text-sm" id="nama">
+                                        <input type="text" name="nama" class="form-control form-control-lg text-sm" value="<?= $row_data['nama']; ?>" id="nama">
                                     </div>
                                     <div class="form-group">
                                         <label for="tgl_lahir">Tanggal Lahir</label>
-                                        <input type="date" name="tgl_lahir" class="form-control form-control-lg text-sm" id="tgl_lahir">
+                                        <input type="date" name="tgl_lahir" class="form-control form-control-lg text-sm" value="<?= $row_data['tgl_lahir']; ?>" id="tgl_lahir">
                                     </div>
                                     <div class="form-group">
                                         <label for="jk">Jenis Kelamin</label>
                                         <select name="jk" id="jk" class="form-control form-control-lg text-sm">
-                                            <option hidden>-Pilih Jenis Kelamin-</option>
-                                            <option value="Laki-laki">Laki-laki</option>
-                                            <option value="Perempuan">Perempuan</option>
+                                            <?php
+                                            if ($row_data['jk'] == "Laki-laki") {
+                                            ?>
+                                                <option hidden>-Pilih Jenis Kelamin-</option>
+                                                <option value="Laki-laki" selected>Laki-laki</option>
+                                                <option value="Perempuan">Perempuan</option>
+                                            <?php
+                                            } else if ($row_data['jk'] == "Perempuan") {
+                                            ?>
+                                                <option hidden>-Pilih Jenis Kelamin-</option>
+                                                <option value="Laki-laki">Laki-laki</option>
+                                                <option value="Perempuan" selected>Perempuan</option>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <option hidden>-Pilih Jenis Kelamin-</option>
+                                                <option value="Laki-laki">Laki-laki</option>
+                                                <option value="Perempuan">Perempuan</option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat</label>
-                                        <textarea name="alamat" id="alamat" class="form-control form-control-lg text-sm"></textarea>
+                                        <textarea name="alamat" id="alamat" class="form-control form-control-lg text-sm"><?= $row_data['alamat']; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="dusun">Dusun</label>
-                                        <input type="text" name="dusun" class="form-control form-control-lg text-sm" id="dusun">
+                                        <input type="text" name="dusun" class="form-control form-control-lg text-sm" id="dusun" value="<?= $row_data['dusun']; ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="pekerjaan">Pekerjaan</label>
-                                        <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" id="pekerjaan">
+                                        <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" value="<?= $row_data['pekerjaan']; ?>" id="pekerjaan">
                                     </div>
                                     <div class="form-group">
                                         <label for="agama">Agama</label>
                                         <select name="agama" id="agama" class="form-control form-control-lg text-sm">
-                                            <option hidden>-Pilih Agama-</option>
-                                            <option value="Islam">Islam</option>
-                                            <option value="Kristen">Kristen</option>
-                                            <option value="Katolik">Katolik</option>
-                                            <option value="Hindu">Hindu</option>
-                                            <option value="Buddha">Buddha</option>
-                                            <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            if ($row_data['agama'] == "Islam") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam" selected>Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            } else if ($row_data['agama'] == "Kristen") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen" selected>Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            } else if ($row_data['agama'] == "Katolik") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik" selected>Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            } else if ($row_data['agama'] == "Hindu") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu" selected>Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            } else if ($row_data['agama'] == "Buddha") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha" selected>Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            } else if ($row_data['agama'] == "Konghucu") {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu" selected>Konghucu</option>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <option hidden>-Pilih Agama-</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control form-control-lg text-sm" id="email" readonly>
+                                        <input type="text" class="form-control form-control-lg text-sm" id="email" value="<?= $_SESSION['email']; ?>" readonly>
                                     </div>
                                 </div>
                             </div>

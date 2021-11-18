@@ -11,7 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="shortcut icon" href="<?= $base_url; ?>assets/images/logo.png" type="image/x-icon">
-    <title>SIDEBA - Administrator</title>
+
+    <title>SIDEBA <?= ($_SESSION['role'] == 1) ? '- Administrator' : '' ; ?> </title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="<?= $base_url; ?>assets/bootstrap/plugins/fontawesome-free/css/all.min.css">

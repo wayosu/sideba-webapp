@@ -25,6 +25,7 @@ if (isset($_POST['auth'])) {
                 $_SESSION['id'] = $id;
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['nama'] = $nama;
+                $_SESSION['role'] = $role;
                 
                 if ($role == 1) {
                     ?>

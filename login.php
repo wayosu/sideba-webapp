@@ -1,6 +1,20 @@
-<?php include 'app/conn.php'; ?>
-<?php include 'base_url.php'; ?>
-<?php include 'app/post/post_login.php'; ?>
+<?php 
+    session_start();
+    include 'base_url.php';
+
+    if (isset($_SESSION['role'])) {
+        if ($_SESSION['role'] == 1) {
+            header('Location: '. $base_url .'admin');
+            return false;
+        } else {
+            header('Location: '. $base_url .'user');
+            return false;
+        }
+    }
+
+    include 'app/conn.php';
+    include 'app/check_login.php'; 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -30,7 +44,7 @@
                     <p class="fs-4">Sistem Informasi Desa Berlian</p>
                     <h1 class="h5 mb-3 fw-normal">Log In</h1>
                 </div>
-                <form action="login" method="post">
+                <form action="" method="post">
                     <div class="form-floating my-2">
                         <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
                         <label for="floatingInput">Email address</label>

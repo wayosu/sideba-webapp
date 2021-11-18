@@ -6,7 +6,10 @@ Options +FollowSymLinks
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+ErrorDocument 404 http://localhost/sideba-webapp/errors/404.php
+
 RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
 
 # User Backup
 RewriteRule ^index$ index.php
@@ -38,6 +41,11 @@ RewriteRule ^([A-Za-z0-9-]+)$ admin.php?views_admin=$1
 </Files>
 
 <Files "conn.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "check_login.php">  
   Order Allow,Deny
   Deny from all
 </Files>
