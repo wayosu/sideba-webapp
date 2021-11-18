@@ -155,7 +155,13 @@ header {
 }
 
 .submit-btn {
-  background-color: rgb(81, 191, 160);
+  background-color: #20c997;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #19a077;
+  color: #fff;
 }
 
 .list {

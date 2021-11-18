@@ -1,3 +1,4 @@
+<?php include 'app/post/admin/post_profile.php' ?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -24,7 +25,9 @@
                 <!-- general form elements -->
                 <div class="card">
                     <!-- form start -->
-                    <form role="form">
+                    <form role="form" action="" method="post">
+                        <input type="hidden" name="id" value="<?= $row_data['id']?>">
+                    
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
@@ -161,7 +164,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-sm btn-primary font-weight-bold">Simpan</button>
+                                <button type="submit" class="btn btn-sm btn-primary font-weight-bold" name="update">Simpan</button>
                                 <a href="<?= $base_url; ?>admin/profile/password" class="btn btn-sm font-weight-bold btn-warning text-white">Ubah Password</a>
                                 <button type="reset" class="btn btn-sm btn-danger font-weight-bold">Reset</button>
                             </div>

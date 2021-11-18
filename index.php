@@ -1,5 +1,8 @@
 <?php
+    session_start();
     include 'base_url.php';
+    include 'app/conn.php';
+    include 'app/function.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">SIDEBA</a></h1>
+      <h1 class="logo"><a href="<?= $base_url; ?>">SIDEBA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -57,7 +60,25 @@
           <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
           <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="getstarted scrollto" href="<?= $base_url; ?>login">Login</a></li>
+          <li>
+            <?php
+              if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] == 1) {
+                ?>
+                  <a class="getstarted scrollto" href="<?= $base_url; ?>admin">Kembali</a>
+                <?php
+                } else {
+                ?>
+                  <a class="getstarted scrollto" href="<?= $base_url; ?>user">Kembali</a>
+                <?php
+                }
+              } else {
+            ?>
+                <a class="getstarted scrollto" href="<?= $base_url; ?>login">Login</a>
+            <?php
+              }
+            ?>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -98,43 +119,43 @@
           <div class="col-lg-4 col-md-6 mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-users"></i></div>
-              <h3>10</h3>
+              <h3><?= total_penduduk($mysqli); ?></h3>
               <h4 class="title"><a href="">Penduduk</a></h4>
-              <p class="description">Desa Berlian mempunyai total penduduk sebanyak 10 orang.</p>
+              <p class="description">Desa Berlian mempunyai total penduduk sebanyak <?= total_penduduk($mysqli); ?> orang.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-male"></i></div>
-              <h3>6</h3>
+              <h3><?= laki_laki($mysqli); ?></h3>
               <h4 class="title"><a href="">Laki-laki</a></h4>
-              <p class="description">Desa Berlian mempunyai penduduk yang berjenis kelamin laki-laki sebanyak 6 orang.
+              <p class="description">Desa Berlian mempunyai penduduk yang berjenis kelamin laki-laki sebanyak <?= laki_laki($mysqli); ?> orang.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-female"></i></div>
-              <h3>4</h3>
+              <h3><?= perempuan($mysqli); ?></h3>
               <h4 class="title"><a href="">Perempuan</a></h4>
-              <p class="description">Desa Berlian mempunyai penduduk yang berjenis kelamin perempuan sebanyak 4 orang.
+              <p class="description">Desa Berlian mempunyai penduduk yang berjenis kelamin perempuan sebanyak <?= perempuan($mysqli); ?> orang.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hands-helping"></i></div>
-              <h3>2</h3>
+              <h3><?= bantuan($mysqli); ?></h3>
               <h4 class="title"><a href="">Bantuan</a></h4>
-              <p class="description">Desa Berlian telah memberikan bantuan kepada penduduk sebanyak 2 bantuan.</p>
+              <p class="description">Desa Berlian telah memberikan bantuan kepada penduduk sebanyak <?= bantuan($mysqli); ?> bantuan.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-syringe"></i></div>
-              <h3>4</h3>
+              <h3><?= vaksin($mysqli); ?></h3>
               <h4 class="title"><a href="">Vaksin</a></h4>
-              <p class="description">Desa Berlian telah melaksanakan vaksin. Penduduk yang telah di vaksin sebanyak 4
+              <p class="description">Desa Berlian telah melaksanakan vaksin. Penduduk yang telah di vaksin sebanyak <?= vaksin($mysqli); ?>
                 orang.</p>
             </div>
           </div>
@@ -262,7 +283,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+  <a href="#" role="button" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="fas fa-angle-up"></i></a>
 
   <!-- Vendor JS Files -->
