@@ -44,9 +44,7 @@ include 'app/post/admin/post_surat.php';
                                 <?php
                                     $result_sktm = $mysqli->query("SELECT * FROM pengajuan_surat WHERE id_surat='1'");
                                     $no=1;
-                                    while ($row_sktm = $result_sktm->fetch_assoc()) {
-                                        $date = date('d-m-Y H:i:s', strtotime($row_sktm['created_at']));
-                                        
+                                    while ($row_sktm = $result_sktm->fetch_assoc()) { 
                                         $date = date('d-m-Y H:i:s', strtotime($row_sktm['created_at']));
                                         $ru = $mysqli->query("SELECT * FROM user WHERE id='$row_sktm[id_user]'");
                                         $r = $ru->fetch_assoc();
