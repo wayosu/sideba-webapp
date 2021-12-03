@@ -47,19 +47,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link d-flex align-items-center">
+                            <a href="<?= $base_url; ?>admin/sktm" class="nav-link d-flex align-items-center">
                                 <i class="fas fa-arrow-right nav-icon text-xs"></i>
                                 <p class="text-sm">Surat Keterangan <br> Tidak Mampu</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link d-flex align-items-center">
+                            <a href="<?= $base_url; ?>admin/skkb" class="nav-link d-flex align-items-center">
                                 <i class="fas fa-arrow-right nav-icon text-xs"></i>
                                 <p class="text-sm">Surat Keterangan <br> Kelakuan Baik</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link d-flex align-items-center">
+                            <a href="<?= $base_url; ?>admin/sku" class="nav-link d-flex align-items-center">
                                 <i class="fas fa-arrow-right nav-icon text-xs"></i>
                                 <p class="text-sm">Surat Keterangan Usaha</p>
                             </a>
@@ -96,6 +96,43 @@
                         <i class="nav-icon fas fa-home"></i>
                         <p>
                             Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-envelope"></i>
+                        <p>
+                            Data Surat
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= $base_url; ?>user/sktm" class="nav-link d-flex align-items-center">
+                                <i class="fas fa-arrow-right nav-icon text-xs"></i>
+                                <p class="text-sm">Surat Keterangan <br> Tidak Mampu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $base_url; ?>user/skkb" class="nav-link d-flex align-items-center">
+                                <i class="fas fa-arrow-right nav-icon text-xs"></i>
+                                <p class="text-sm">Surat Keterangan <br> Kelakuan Baik</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $base_url; ?>user/sku" class="nav-link d-flex align-items-center">
+                                <i class="fas fa-arrow-right nav-icon text-xs"></i>
+                                <p class="text-sm">Surat Keterangan Usaha</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= $base_url; ?>user/profile" class="nav-link">
+                        <i class="nav-icon fas fa-cog"></i>
+                        <p>
+                            Ubah Profil
                         </p>
                     </a>
                 </li>

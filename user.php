@@ -28,6 +28,16 @@ include 'views/layout/ua/sidebar.php';
     <?php
     if (isset($_GET['views_user']) && $_GET['views_user'] == "user") {
         include 'views/page/user/index.php';
+    } else if (isset($_GET['views_user']) && $_GET['views_user'] == "profile") {
+        include 'views/page/user/profile.php';
+    } else if (isset($_GET['views_user']) && $_GET['views_user'] == "password") {
+        include 'views/page/user/password.php';
+    } else if (isset($_GET['views_user']) && $_GET['views_user'] == "sktm") {
+        include 'views/page/user/sktm/index.php';
+    } else if (isset($_GET['views_user']) && $_GET['views_user'] == "skkb") {
+        include 'views/page/user/skkb/index.php';
+    } else if (isset($_GET['views_user']) && $_GET['views_user'] == "sku") {
+        include 'views/page/user/sku/index.php';
     } else {
         include 'views/page/user/index.php';
     }

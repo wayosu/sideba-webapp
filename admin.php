@@ -42,6 +42,12 @@ include 'views/layout/ua/sidebar.php';
         include 'views/page/admin/profile.php';
     } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "password") {
         include 'views/page/admin/password.php';
+    } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "sktm") {
+        include 'views/page/admin/sktm/index.php';
+    } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "skkb") {
+        include 'views/page/admin/skkb/index.php';
+    } else if (isset($_GET['views_admin']) && $_GET['views_admin'] == "sku") {
+        include 'views/page/admin/sku/index.php';
     } else {
         include 'views/page/admin/index.php';
     }

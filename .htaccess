@@ -29,8 +29,19 @@ RewriteRule ^admin/vaksin$ admin.php?views_admin=vaksin
 RewriteRule ^admin/profile$ admin.php?views_admin=profile
 RewriteRule ^admin/profile/password$ admin.php?views_admin=password
 
+RewriteRule ^admin/sktm$ admin.php?views_admin=sktm
+RewriteRule ^admin/skkb$ admin.php?views_admin=skkb
+RewriteRule ^admin/sku$ admin.php?views_admin=sku
+
 # User
 RewriteRule ^user$ user.php
+
+RewriteRule ^user/sktm$ user.php?views_user=sktm
+RewriteRule ^user/skkb$ user.php?views_user=skkb
+RewriteRule ^user/sku$ user.php?views_user=sku
+
+RewriteRule ^user/profile$ user.php?views_user=profile
+RewriteRule ^user/profile/password$ user.php?views_user=password
 
 RewriteRule ^([A-Za-z0-9-]+)$ index.php?views=$1
 RewriteRule ^([A-Za-z0-9-]+)$ admin.php?views_admin=$1
