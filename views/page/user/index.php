@@ -62,7 +62,6 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
                             <h4 class="card-title">Data Penduduk</h4>
-                            <a href="<?= $base_url; ?>admin/penduduk" class="btn btn-sm btn-primary font-weight-bold shadow"><i class="fas fa-list"></i> &nbsp;Selengkapnya</a>
                         </div>
                         <div class="border-bottom my-3"></div>
                         <table class="table example2 table-striped text-sm">

@@ -43,7 +43,7 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit" name="update_pass" class="btn btn-sm btn-primary font-weight-bold">Simpan</button>
-                                <a href="<?= $base_url; ?>admin/profile" class="btn btn-sm font-weight-bold btn-warning text-white">Ubah Profil</a>
+                                <a href="<?= $base_url; ?>user/profile" class="btn btn-sm font-weight-bold btn-warning text-white">Ubah Profil</a>
                                 <button type="reset" class="btn btn-sm btn-danger font-weight-bold">Reset</button>
                             </div>
                         </div>

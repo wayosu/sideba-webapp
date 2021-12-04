@@ -33,12 +33,20 @@ RewriteRule ^admin/sktm$ admin.php?views_admin=sktm
 RewriteRule ^admin/skkb$ admin.php?views_admin=skkb
 RewriteRule ^admin/sku$ admin.php?views_admin=sku
 
+RewriteRule ^admin/cetak_penduduk$ admin.php?views_admin=cetak_penduduk
+RewriteRule ^admin/cetak_bantuan$ admin.php?views_admin=cetak_bantuan
+RewriteRule ^admin/cetak_vaksin$ admin.php?views_admin=cetak_vaksin
+
 # User
 RewriteRule ^user$ user.php
 
 RewriteRule ^user/sktm$ user.php?views_user=sktm
 RewriteRule ^user/skkb$ user.php?views_user=skkb
 RewriteRule ^user/sku$ user.php?views_user=sku
+
+RewriteRule ^user/cetak_sktm$ user.php?views_user=cetak_sktm
+RewriteRule ^user/cetak_skkb$ user.php?views_user=cetak_skkb
+RewriteRule ^user/cetak_sku$ user.php?views_user=cetak_sku
 
 RewriteRule ^user/profile$ user.php?views_user=profile
 RewriteRule ^user/profile/password$ user.php?views_user=password

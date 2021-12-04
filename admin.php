@@ -18,10 +18,20 @@ if ($_SESSION['role'] != 1) {
 }
 
 include 'app/conn.php';
-include 'app/get_data.php';
-include 'views/layout/ua/header.php';
-include 'views/layout/ua/navbar.php';
-include 'views/layout/ua/sidebar.php';
+if (isset($_GET['views_admin']) && $_GET['views_admin'] == "cetak_penduduk" || isset($_GET['views_admin']) && $_GET['views_admin'] == "cetak_bantuan" || isset($_GET['views_admin']) && $_GET['views_admin'] == "cetak_vaksin") {
+    if ($_GET['views_admin'] == "cetak_penduduk") {
+        include 'app/print/cetak_penduduk.php';
+    } else if ($_GET['views_admin'] == "cetak_bantuan") {
+        include 'app/print/cetak_bantuan.php';
+    } else if ($_GET['views_admin'] == "cetak_vaksin") {
+        include 'app/print/cetak_vaksin.php';
+    }
+
+} else {
+    include 'app/get_data.php';
+    include 'views/layout/ua/header.php';
+    include 'views/layout/ua/navbar.php';
+    include 'views/layout/ua/sidebar.php';
 ?>
 
 <div class="content-wrapper">
@@ -55,5 +65,6 @@ include 'views/layout/ua/sidebar.php';
 </div>
 
 <?php
-include 'views/layout/ua/footer.php';
+    include 'views/layout/ua/footer.php';
+}
 ?>

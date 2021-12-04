@@ -78,7 +78,14 @@ include 'app/post/user/post_surat.php';
                                                                 <?php
                                                                 echo"";
                                                             } else {
-                                                                echo "<a href='' class='btn btn-xs btn-primary'><i class='fas fa-download'></i> Download</a>";
+                                                                echo "";
+                                                                ?>
+                                                                    <form action="<?= $base_url; ?>user/cetak_sktm" method="post" target="_BLANK">
+                                                                        <input type="hidden" name="id" value="<?= $row_sktm['id_user']; ?>">
+                                                                        <button type="submit" name="cetak_sktm" class="btn btn-xs btn-primary"><i class="fas fa-download"></i> Download</button>
+                                                                    </form>
+                                                                <?php
+                                                                echo"";
                                                             }
                                                 echo"
                                                         </td>

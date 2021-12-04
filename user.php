@@ -18,10 +18,20 @@ if ($_SESSION['role'] != 0) {
 }
 
 include 'app/conn.php';
-include 'app/get_data.php';
-include 'views/layout/ua/header.php';
-include 'views/layout/ua/navbar.php';
-include 'views/layout/ua/sidebar.php';
+if (isset($_GET['views_user']) && $_GET['views_user'] == "cetak_sktm" || isset($_GET['views_user']) && $_GET['views_user'] == "cetak_skkb" || isset($_GET['views_user']) && $_GET['views_user'] == "cetak_sku") {
+    if ($_GET['views_user'] == "cetak_sktm") {
+        include 'app/print/cetak_sktm.php';
+    } else if ($_GET['views_user'] == "cetak_skkb") {
+        include 'app/print/cetak_skkb.php';
+    } else if ($_GET['views_user'] == "cetak_sku") {
+        include 'app/print/cetak_sku.php';
+    }
+
+} else {
+    include 'app/get_data.php';
+    include 'views/layout/ua/header.php';
+    include 'views/layout/ua/navbar.php';
+    include 'views/layout/ua/sidebar.php';
 ?>
 
 <div class="content-wrapper">
@@ -45,5 +55,6 @@ include 'views/layout/ua/sidebar.php';
 </div>
 
 <?php
-include 'views/layout/ua/footer.php';
+    include 'views/layout/ua/footer.php';
+}
 ?>

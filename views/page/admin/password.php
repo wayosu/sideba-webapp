@@ -1,3 +1,4 @@
+<?php include 'app/post/admin/post_profile.php' ?>
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
@@ -24,22 +25,24 @@
                 <!-- general form elements -->
                 <div class="card">
                     <!-- form start -->
-                    <form role="form">
+                    <form action="" method="post">
+                        <input type="hidden" name="id" value="<?= $row_data['id']?>">
+
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="pekerjaan">Password Lama</label>
-                                <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" id="pekerjaan">
+                                <label for="pass_lama">Password Lama</label>
+                                <input type="password" name="pass_lama" class="form-control form-control-lg text-sm" id="pass_lama">
                             </div>
                             <div class="form-group">
-                                <label for="pekerjaan">Password Baru</label>
-                                <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" id="pekerjaan">
+                                <label for="pass_baru">Password Baru</label>
+                                <input type="password" name="pass_baru" class="form-control form-control-lg text-sm" id="pass_baru">
                             </div>
                             <div class="form-group">
-                                <label for="pekerjaan">Konfirmasi Password Baru</label>
-                                <input type="text" name="pekerjaan" class="form-control form-control-lg text-sm" id="pekerjaan">
+                                <label for="konfir_pass_baru">Konfirmasi Password Baru</label>
+                                <input type="password" name="konfir_pass_baru" class="form-control form-control-lg text-sm" id="konfir_pass_baru">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-sm btn-primary font-weight-bold">Simpan</button>
+                                <button type="submit" name="update_pass" class="btn btn-sm btn-primary font-weight-bold">Simpan</button>
                                 <a href="<?= $base_url; ?>admin/profile" class="btn btn-sm font-weight-bold btn-warning text-white">Ubah Profil</a>
                                 <button type="reset" class="btn btn-sm btn-danger font-weight-bold">Reset</button>
                             </div>

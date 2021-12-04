@@ -27,7 +27,10 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
                             <h4 class="card-title">Data Bantuan</h4>
-                            <a href="<?= $base_url; ?>admin/bantuan/create" class="btn btn-sm btn-primary font-weight-bold shadow"><i class="fas fa-plus-circle"></i> Tambah Bantuan</a>
+                            <form action="<?= $base_url; ?>admin/cetak_bantuan" method="post" target="_BLANK">
+                                <a href="<?= $base_url; ?>admin/bantuan/create" class="btn btn-sm btn-primary font-weight-bold shadow"><i class="fas fa-plus-circle"></i> Tambah Bantuan</a>
+                                <button type="submit" name="cetak_bantuan" class="btn btn-sm bg-teal font-weight-bold shadow"><i class="fas fa-print"></i> Cetak</button>
+                            </form>
                         </div>
                         <div class="border-bottom my-3"></div>
                         <table id="example1" class="table table-striped text-sm">
