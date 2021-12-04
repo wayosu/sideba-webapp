@@ -28,7 +28,7 @@ function tgl_indo($tanggal)
 <html lang="en">
 
 <head>
-    <title>Klasifikasi Berdasarkan Pendidikan Terakhir</title>
+    <title>Daftar Penerima Bantuan</title>
     <style>
         .display-data {
             font-size: 12px;

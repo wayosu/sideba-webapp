@@ -29,6 +29,7 @@
                     <td>$row[jk]</td>
                     <td>$tahun Tahun</td>
                     <td>$row[alamat]</td>
+                    <td>$row[dusun]</td>
                 </tr>
             ";
         $no++;
